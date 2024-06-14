@@ -57,7 +57,7 @@ const CheckoutForm = ({ amount }) => {
       clientSecret,
       elements,
       confirmParams: {
-        return_url: "https://coursesapp-oqmv.onrender.com/payment-confirm",
+        return_url: process.env.NEXT_PUBLIC_BASE_URL + "/payment-confirm",
       },
     });
 
