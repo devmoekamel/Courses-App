@@ -12,7 +12,7 @@ function ProductSection() {
 
     const getlatestproduct_ = ()=>{
         ProductApis.getLatestProduct().then(response=>{
-            console.log(response.data.data);
+            // console.log(response.data.data);
             setproducts(response.data.data);
         })
     }

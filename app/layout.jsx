@@ -21,9 +21,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
   const [cart,setCart]= useState([]);
+  const addToCart = (item) => {
+    setCart([...cart, item]);
+  };
   return (
     <ClerkProvider>
-     <cartcontext.Provider value={{ cart, setCart }}>
+     <cartcontext.Provider value={{ cart, setCart ,addToCart}}>
     <html lang="en">
       <body className={inter.className}>
         <Header />
