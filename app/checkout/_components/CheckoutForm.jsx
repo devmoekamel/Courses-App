@@ -46,8 +46,8 @@ const CheckoutForm = ({ amount }) => {
         amount: amount,
       }),
     });
-    if(res.ok){
-        createOrder();
+    if (res.ok) {
+      createOrder();
     }
     console.log(res);
     const clientSecret = await res.json();
@@ -57,7 +57,7 @@ const CheckoutForm = ({ amount }) => {
       clientSecret,
       elements,
       confirmParams: {
-        return_url: "http://localhost:3000/payment-confirm",
+        return_url: "https://coursesapp-oqmv.onrender.com/payment-confirm",
       },
     });
 
